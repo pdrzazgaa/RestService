@@ -76,10 +76,9 @@ public class PersonController {
 //                .body(p);
     }
     @RequestMapping(value = "/persons/{id}", method = RequestMethod.DELETE)
-    public EntityModel<Boolean> deletePerson(@PathVariable int id) throws PersonNotFoundEx, BadRequestEx{
+    public EntityModel deletePerson(@PathVariable int id) throws PersonNotFoundEx, BadRequestEx{
         System.out.println("...wywołano deletePerson");
-        boolean b = personRepository.deletePerson(id);
-        return EntityModel.of(b,
+        return EntityModel.of(
                 linkTo(methodOn(PersonController.class).deletePerson(id)).withSelfRel(),
                 linkTo(methodOn(PersonController.class).getPerson(id)).withRel("get"),
                 linkTo(methodOn(PersonController.class).getPersons()).withRel("list all"));
