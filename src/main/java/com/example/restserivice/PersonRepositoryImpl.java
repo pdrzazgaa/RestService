@@ -9,10 +9,10 @@ public class PersonRepositoryImpl implements PersonRepository{
 
     public PersonRepositoryImpl(){
         personList = new ArrayList<>();
-        personList.add(new Person(1, "Paula", 21));
-        personList.add(new Person(2, "Kuba", 21));
-        personList.add(new Person(3, "Ania", 16));
-        personList.add(new Person(4, "Paweł", 29));
+        personList.add(new Person(1, "Paula", 21, "paudrza@gmail.com"));
+        personList.add(new Person(2, "Kuba", 21, "kubacz@op.pl"));
+        personList.add(new Person(3, "Ania", 16, "aniakrak@wp.pl"));
+        personList.add(new Person(4, "Paweł", 29, "pawelpawel@gmail.com"));
     }
 
     @Override
