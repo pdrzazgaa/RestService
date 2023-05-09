@@ -8,5 +8,6 @@ public interface PersonRepository {
     Person updatePerson(Person person) throws PersonNotFoundEx;
     boolean deletePerson(int id) throws PersonNotFoundEx;
     Person addPerson(Person person) throws BadRequestEx;
+    Integer countPersons();
 
 }

@@ -60,4 +60,9 @@ public class PersonRepositoryImpl implements PersonRepository{
         personList.add(person);
         return person;
     }
+    @Override
+    public Integer countPersons(){
+        return personList.size();
+    }
+
 }
